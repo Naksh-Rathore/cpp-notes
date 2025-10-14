@@ -25,7 +25,7 @@ C:.
 * Practice: An empty file to write code in and a Makefile to build and test. Perfect for learning the basics
 * Notes: A directory that has explanations and guides on how to do things in C++. Each filename corresponds to a section in the [learncpp.com](https://learncpp.com) website. For example, `section1.md` is for the first section in the site.
 
-  ## Contributing
+## Contributing
 
   Feel free to make an issue, pull request, or contact me at any of my socials to ask me if you want! My issues, pull requests, and DMs are always open. That being said, I would like if the issues and PRs you
   send are **relevant**, **concise**, and are actually **helpful** in general. Spammy and unrelated issues and PRs will either be closed or given the `info-needed` tag. Thanks!
