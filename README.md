@@ -1,6 +1,7 @@
 # C++ Notes
 ---
-**Maintainer: Naksh R.**
+
+**Maintainer: Naksh R.**<br />
 **Date created: October 13th, 2025**
 
 ---
