@@ -12,17 +12,19 @@ int main() {
         std::cout << "Enter a number to factor: ";
         std::cin >> multiple;
 
-        if (!std::cin.fail() && multiple < 1) {
-            std::cout << "Invalid input! Please enter a positive number" << "\n";
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Invalid input! Please enter a positive integer.\n";
             continue;
         }
 
+        if (multiple < 1) {
+            std::cout << "Invalid input! Please enter a positive integer.\n";
+            continue;
+        }
 
-        if (!std::cin.fail()) break;
-
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
-        std::cout << "Invalid input! Please enter a positive number" << "\n";
+        break;
     }
 
     std::cout << "\nFactors of " << multiple << ":" << "\n"; 
