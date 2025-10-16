@@ -32,16 +32,12 @@ int main() {
 }
 
 bool isPerfectNumber(int num) {
-    std::vector<int> divisors {};
     int sum{};
 
     for (int i = 1; i < num; i++) {
         if (num % i == 0)
-            divisors.push_back(i);
+            sum += i;
     }
-
-    for (int divisor : divisors)
-        sum += divisor;
         
     return (sum == num);
 }
