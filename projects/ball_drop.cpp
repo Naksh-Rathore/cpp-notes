@@ -28,7 +28,7 @@ int main() {
 }
 
 double calculateBallHeight(double towerHeight, int seconds) {
-    double gravity { 9.8 };
+    const double gravity { 9.8 };
     
     double fallDistance { gravity * (seconds * seconds) / 2.0 };
     double ballHeight { towerHeight - fallDistance };
