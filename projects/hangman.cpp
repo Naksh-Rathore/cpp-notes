@@ -65,10 +65,10 @@ GameBoard gameInit() {
     std::mt19937 mt{ rd() }; 
     std::uniform_int_distribution<size_t> die6{ 0, words.size() - 1};
 
-    //std::string word { words[die6(mt)] };
-    std::string word { "banana" };
+    std::string word { words[die6(mt)] };
 
-    std::cout << word << "\n"; // DEBUG
+    //std::string word { "banana" }; DEBUG
+    //std::cout << word << "\n"; // DEBUG
 
     GameBoard game{};
 
