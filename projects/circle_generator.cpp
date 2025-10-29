@@ -30,8 +30,8 @@ std::vector<std::array<double, 2>> createCircle(double circleCenterX, double cir
     std::array<double, 2> cords{};
 
     for (double theta = 0; theta <= 2 * M_PI; theta++) {
-        cords.at(0) = circleCenterX + radius * sin(theta);
-        cords.at(1) = circleCenterY + radius * cos(theta);
+        cords.at(0) = circleCenterX + radius * cos(theta);
+        cords.at(1) = circleCenterY + radius * sin(theta);
 
         points.push_back(cords);
     }
