@@ -15,7 +15,7 @@ struct GameBoard {
 GameBoard gameInit();
 char getUserGuess(int triesLeft);
 bool correctLetterCheck(GameBoard& game, char guess);
-void printVector(std::vector<char> vec);
+void printVector(std::vector<char> &vec);
 
 int main() {
 
@@ -42,9 +42,9 @@ int main() {
             std::cout << "Try again! Tries left: " << triesLeft << "\n";
         }
 
-        bool isWon { std::find(game.userGuess.begin(), game.userGuess.end(), '_') != game.userGuess.end() };
+        bool isWon { std::find(game.userGuess.begin(), game.userGuess.end(), '_') == game.userGuess.end() };
         
-        if (!isWon) {
+        if (isWon) {
             printVector(game.userGuess);
             std::cout << "\n" << "You won the game!" << "\n";
             break;
@@ -67,7 +67,7 @@ GameBoard gameInit() {
 
     std::string word { words[die6(mt)] };
 
-    //std::string word { "banana" }; DEBUG
+    //std::string word { "banana" }; // DEBUG
     //std::cout << word << "\n"; // DEBUG
 
     GameBoard game{};
@@ -120,7 +120,7 @@ bool correctLetterCheck(GameBoard& game, char guess) {
     return isFound;
 }
 
-void printVector(std::vector<char> vec) {
+void printVector(std::vector<char> &vec) {
     for (auto character : vec) {
         std::cout << character << " ";
     }
