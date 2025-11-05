@@ -63,9 +63,9 @@ GameBoard gameInit() {
     // Get random word from wordlist
     std::random_device rd;
     std::mt19937 mt{ rd() }; 
-    std::uniform_int_distribution<size_t> die6{ 0, words.size() - 1};
+    std::uniform_int_distribution<size_t> randNum{ 0, words.size() - 1};
 
-    std::string word { words[die6(mt)] };
+    std::string word { words[randNum(mt)] };
 
     //std::string word { "banana" }; // DEBUG
     //std::cout << word << "\n"; // DEBUG
