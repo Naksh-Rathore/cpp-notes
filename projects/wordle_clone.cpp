@@ -63,7 +63,7 @@ int main() {
     std::string tempUserGuess{};
 
     while (true) {
-        std::cout << "[DEBUG]: " << board.word() << "\n";
+        //std::cout << "[DEBUG]: " << board.word() << "\n";
 
         getUserInput(tempUserGuess, "Enter your guess: ");
         board.setUserGuess(tempUserGuess);
@@ -121,13 +121,13 @@ void printUserGuess(Board& board) {
 
     for (int color : board.colors()) {
         if (color == 0)
-            std::cout << "G";
+            std::cout << "\033[32mG\033[0m";
         
         else if (color == 1)
-            std::cout << "Y";
+            std::cout << "\033[33mY\033[0m";
         
         else
-            std::cout << "R";
+            std::cout << "\033[31mR\033[0m";
     }
 
     std::cout << "\n";
